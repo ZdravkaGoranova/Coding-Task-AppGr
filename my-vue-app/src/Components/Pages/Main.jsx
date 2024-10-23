@@ -36,7 +36,7 @@ console.log(note);
         try {
             if (note) {
                 const newNote = await note;
-                setNotes([...notes], newNote);
+                setNotes([...notes, newNote]);
                 toast.success("The Note save successfully !");
             }
 
@@ -57,7 +57,7 @@ console.log(note);
 
     const saveHandler = (e) => {
         e.preventDefault();
-
+        
         if (inputTitle.trim() == "") {
 
             toast.error("Input Title is required!");
